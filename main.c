@@ -16,6 +16,7 @@ void dna_to_rna(char *dnaSeq);
 void translation(char *mRNA);
 
 int main() {
+	system(""); //to run in Windows, trick but not a good convention
 	srand(time(NULL)); //feeding a random seed for true random
 	
 	int lenOfseq; // sequence length
@@ -84,6 +85,10 @@ int main() {
 	getchar();
 	printf("5' "); color_seq(codingDNAseq, false); printf(" 3' %smRNA Strand%s\n", CORN_BOLD_ANSI, RESET_ANSI);
 	printf("   "); translation(codingDNAseq);		
-	
+
+	printf("Press any key to close the window...\n");
+
+	system("pause > null"); // stops the window from closing automatically, trick but not good convention
+
 	return 0;
 	}

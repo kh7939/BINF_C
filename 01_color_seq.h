@@ -36,6 +36,6 @@ void color_seq(char *dnaSeq, bool pause) {
 			default:;
 			}
 			
-			if (pause) {fflush(stdout);	usleep(2500);}
+			if (pause) {fflush(stdout);	usleep(7500);}
 		}
 	}
